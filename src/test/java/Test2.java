@@ -1,12 +1,11 @@
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 
 public class Test2 extends BeseTest{
     private final static String Base_URL = "https://testsheepnz.github.io";
 
-    /**
-     * Кейс 1: Разница двух целых чисел
-     */
+    @DisplayName("Кейс 1: Разница двух целых чисел")
     @Test
     public void checkDifference(){
         MainPage mainPage = new MainPage(Base_URL+"/BasicCalculator.html");
@@ -19,10 +18,9 @@ public class Test2 extends BeseTest{
         System.out.println(res);
         Assert.assertTrue(res.contains("-1"));
     }
-    /**
-     * Кейс 2 Конкатенация двух строк
-     */
+    @DisplayName("Кейс 2: Конкатенация двух строк")
     @Test
+
     public void checkConcatenate(){
         MainPage mainPage = new MainPage(Base_URL+"/BasicCalculator.html");
         mainPage.inputBuild("Prototype");
@@ -34,9 +32,7 @@ public class Test2 extends BeseTest{
         System.out.println(res);
         Assert.assertTrue(res.contains("gsbu"));
     }
-    /**
-     * Кейс 3 Появление сообщения при вводе строки в поле
-     */
+    @DisplayName("Кейс 3: Появление сообщения при вводе строки в поле")
     @Test
     public void checkString(){
         MainPage mainPage = new MainPage(Base_URL+"/random-number.html");

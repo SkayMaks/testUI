@@ -1,5 +1,6 @@
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import org.junit.jupiter.api.DisplayName;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -18,7 +19,6 @@ public class MainPage {
     private final SelenideElement answer = $x("//body[1]/section[1]/div[1]/div[1]/div[1]/form[4]/div[1]/div[2]/input[1]");
     private final SelenideElement res = $x("//body[1]/section[1]/div[1]/div[1]/div[1]/form[4]/div[4]/div[1]/label[1]/font[1]/b[1]/i[1]");
     private final  SelenideElement buildK3 = $x("//body[1]/section[1]/div[1]/div[1]/div[1]/form[2]/div[1]/div[3]/select[1]");
-
     /**
      * Открытие страницы
      */
